@@ -193,6 +193,13 @@
             }
         }
 
+        public function get_column($colNum){
+            foreach($this->data as $row){
+                $tmp[] = $row[$colNum];
+            }
+            return $tmp;
+        }
+
         public function quartile($array, $quartile) {
             // quartile position is number in array + 1 multiplied by the quartile i.e. 0.25, 0.5, 0.75
             $pos = (count($array) + 1) * $quartile;
